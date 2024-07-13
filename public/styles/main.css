@@ -1,0 +1,58 @@
+
+.navigation{
+  background-color: #ffffff;
+}
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  margin: 0;
+}
+
+.logo-name{
+  font-size: 30px;
+}
+
+.blurred {
+  filter: blur(5px);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.logo-section img {
+  margin-right: 10px;
+}
