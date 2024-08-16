@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>WriteWave - Unleash your creativity</title>
+    <link rel="icon" type="image/x-icon" href="/images/title-logo.svg">
+    <style>
+        #title {
+            font-size: 30px;
+        }
+
+        #content {
+            font-size: 20px;
+            height: 400px;
+        }
+
+        #inputField{
+            font-size: 20px;
+        }
+
+        .container {
+            width: 50%;
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
     <%- include("Navigation.ejs") %>
+    <%- include("Login.ejs") %>
+    <%- include("Signup.ejs") %>
+    <div class="container">
+        <div class="contain mt-5">
+            <h1>Create Post</h1>
+        </div>
+        <form action="/add_post" method="POST">
+            <input type="text" class="form-control mt-5 form-control-lg border-3" name="title" id="title" placeholder="Title" required>
+            <textarea class="form-control mt-3 mb-3 border border-3" id="inputField" rows="5" name="description" placeholder="Description" required></textarea>
+                <small id="wordCount" class="form-text text-muted">0 words (50 Words Limit)</small>
+                <div id="wordLimitError" class="text-danger" style="display: none;">Word limit exceeded!</div>
+            <textarea class="form-control mt-3 mb-3 border border-3" name="content" id="content" placeholder="Tell your story..." required></textarea>
+            <button type="submit " class="btn btn-primary">Publish</button>
+        </form>
+    </div>
+    <%- include("navigation_script.ejs") %>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputField = document.getElementById('inputField');
+            const wordCount = document.getElementById('wordCount');
+            const wordLimitError = document.getElementById('wordLimitError');
+            const wordLimit = 50;
+
+            inputField.addEventListener('input', function() {
+                const words = inputField.value.split(/\s+/).filter(function(word) {
+                    return word.length > 0;
+                });
+                wordCount.textContent = `${words.length} words`;
+
+                if (words.length > wordLimit) {
+                    wordLimitError.style.display = 'block';
+                } else {
+                    wordLimitError.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

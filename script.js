@@ -10,3 +10,5 @@ document.getElementById('signUpBtn').addEventListener('click', function() {
   modalSignin.addEventListener('hide.bs.modal', function () {
     document.getElementById('content').classList.remove('blurred');
   });
+
+  

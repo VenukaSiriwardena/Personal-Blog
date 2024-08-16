@@ -5,25 +5,27 @@
        <h1 class="fw-bold mb-0 fs-2">Sign Up for Free</h1>
        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
      </div>
-     <div class="modal-body p-5 pt-0">
-         <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-           <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
-           Sign Up with Email
-         </button>
+     <div class="modal-body pt-0">
+      <div class="d-flex gap-3 flex-column mt-4">
+        <a href='/signup' class="btn btn-lg btn-outline-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-custom" viewBox="0 0 512 512">
+            <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+          </svg>          
+            <span class="ms-2 fs-6">Sign Up with Email</span>
+        </a>
+      </div>
          <hr class="my-4">
          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-         <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-           <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
-           Sign Up with Twitter
-         </button>
-         <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-           <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
-           Sign Up with Facebook
-         </button>
-         <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-           <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
-           Sign Up with GitHub
-         </button>
+         <div class="d-flex gap-3 flex-column mt-4">
+          <a href='/auth/google' class="btn btn-lg btn-outline-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                  <path
+                      d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+              </svg>
+              <span class="ms-2 fs-6">Sign Up with Google</span>
+          </a>
+      </div>
        </form>
      </div>
    </div>

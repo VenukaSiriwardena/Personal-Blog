@@ -1,0 +1,43 @@
+<script>
+    // Show Sign In Modal and blur background
+    document.getElementById('signInBtn')?.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default behavior
+      var myModal = new bootstrap.Modal(document.getElementById('modalSignIn'));
+      myModal.show();
+    });
+  
+    // Show Sign Up Modal and blur background
+    document.getElementById('signUpBtn')?.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default behavior
+      var myModal = new bootstrap.Modal(document.getElementById('modalSignUp'));
+      myModal.show();
+    });
+  
+    // Add blur effect when Sign In Modal is shown and remove when hidden
+    var modalSignIn = document.getElementById('modalSignIn');
+    modalSignIn.addEventListener('show.bs.modal', function () {
+      document.getElementById('content').classList.add('blurred');
+    });
+    modalSignIn.addEventListener('hide.bs.modal', function () {
+      document.getElementById('content').classList.remove('blurred');
+    });
+  
+    // Add blur effect when Sign Up Modal is shown and remove when hidden
+    var modalSignUp = document.getElementById('modalSignUp');
+    modalSignUp.addEventListener('show.bs.modal', function () {
+      document.getElementById('content').classList.add('blurred');
+    });
+    modalSignUp.addEventListener('hide.bs.modal', function () {
+      document.getElementById('content').classList.remove('blurred');
+    });
+  
+    // Redirect to create post page
+    document.getElementById('createPostBtn')?.addEventListener('click', () => {
+      window.location.href = '/posts';
+    });
+  
+    // Redirect to my account page
+    document.getElementById('myAccountBtn')?.addEventListener('click', () => {
+      window.location.href = '/profile';
+    });
+  </script>

@@ -17,8 +17,7 @@
       <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Share your thoughts and stories</h1>
       <p class="lead">Create, edit, and manage your blog posts with ease. Enjoy a seamless experience with customizable templates, responsive design, and interactive features to engage your audience.</p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Sign Up</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Login</button>
+        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold" onclick="window.location.href='/posts';">Write Post</button>
       </div>
     </div>
     <div class="col-lg-3 offset-lg-1 p-0 overflow-hidden shadow-lg">
@@ -30,11 +29,11 @@
       <h1 class="display-3 fw-bold">For creatives</h1>
       <h3 class="fw-normal text-muted mb-3">Unleash your creativity</h3>
       <div class="d-flex gap-3 justify-content-center lead fw-normal">
-        <a class="icon-link" href="#">
-          Create Post
+        <a class="icon-link" onclick="window.location.href='/login';">
+          Get Started
           <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
         </a>
-        <a class="icon-link" href="#">
+        <a class="icon-link" onclick="window.location.href='/about';">
           Learn more
           <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
         </a>
@@ -43,56 +42,8 @@
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
-
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-          <img class="bi" width="60" height="80" src="/images/small-logo.svg">
-        </a>
-        <span class="mb-3 mb-md-0 text-body-secondary"><b>© 2024 Venuka Siriwardena</b></span>
-      </div>
-  
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="/images/linkedin.svg" alt="Bootstrap" width="40" height="60" class="d-inline-block align-text-top"></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="/images/instagram.svg" alt="Bootstrap" width="40" height="60" class="d-inline-block align-text-top"></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><img src="/images/facebook.svg" alt="Bootstrap" width="40" height="60" class="d-inline-block align-text-top"></a></li>
-      </ul>
-    </footer>
-  </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="/script.js"></script>
-    <script>
-      document.getElementById('signInBtn').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default behavior (e.g., form submission or link navigation)
-        var myModal = new bootstrap.Modal(document.getElementById('modalSignIn'));
-        myModal.show();
-      });
-    
-      var modalSignIn = document.getElementById('modalSignIn');
-      modalSignIn.addEventListener('show.bs.modal', function () {
-        document.getElementById('content').classList.add('blurred');
-      });
-      modalSignIn.addEventListener('hide.bs.modal', function () {
-        document.getElementById('content').classList.remove('blurred');
-      });
-    
-      document.getElementById('signUpBtn').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default behavior (e.g., form submission or link navigation)
-        var myModal = new bootstrap.Modal(document.getElementById('modalSignUp'));
-        myModal.show();
-      });
-    
-      var modalSignUp = document.getElementById('modalSignUp');
-      modalSignUp.addEventListener('show.bs.modal', function () {
-        document.getElementById('content').classList.add('blurred');
-      });
-      modalSignUp.addEventListener('hide.bs.modal', function () {
-        document.getElementById('content').classList.remove('blurred');
-      });     
-    </script>
-    
+    <%- include("Footer.ejs")  %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <%- include("navigation_script.ejs") %>
 </body>
 </html>

@@ -56,3 +56,34 @@
 .logo-section img {
   margin-right: 10px;
 }
+
+body {
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+.card img {
+  max-width: 100%;
+  /* Ensure image doesn't overflow */
+}
+
+.card {
+  border: none;
+  /* Remove card border */
+}
+
+.card-body {
+  padding: 0;
+  /* Remove card body padding */
+}
+
+.form-section {
+  height: 100vh;
+  /* Make section full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
